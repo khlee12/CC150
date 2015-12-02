@@ -12,17 +12,15 @@ class HashTable{
 	}
 	public static void checkUnique(String str){
 		Hashtable ht = new Hashtable();
-		//Input to the array
-		String[] arr = str.split("");
-		//Scan the array and put into the hash
-		for(int i=0;i<arr.length;i++){
+		//Scan the string and put into the hash
+		for(int i=0;i<str.length();i++){
 			//if hash have this character->print and end
-			if(ht.get(arr[i])!=null){
+			if(ht.get(str.charAt(i))!=null){
 				System.out.println("It is not the unique string");
 				return;
 			}else{
 				//else->put
-				ht.put(arr[i], true);
+				ht.put(str.charAt(i), true);
 			}
 		}
 		System.out.println("This is the unique String");
